@@ -1,3 +1,7 @@
 # JiraFake
 a Java school project
-TEST WORD
+
+
+HOW TO USE
+======
+
