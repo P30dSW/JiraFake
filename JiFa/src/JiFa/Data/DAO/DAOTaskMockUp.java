@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import JiFa.Data.Interface.DAOTask;
 
-public class BCDAOTask implements DAOTask{
+public class DAOTaskMockUp implements DAOTask{
 
 	@Override
 	public void createTask(String[] data, int projectId) {

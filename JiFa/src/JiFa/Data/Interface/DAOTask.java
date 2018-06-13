@@ -1,5 +1,11 @@
 package JiFa.Data.Interface;
 
-public interface DAOTask {
+import java.util.ArrayList;
 
+public interface DAOTask {
+public void createTask(String[] data, int projectId);
+public void editTask(int id);
+public void deleteTask(int id);
+public String[] getTask(int id);
+public ArrayList<String[]> getTasks();
 }

@@ -4,18 +4,11 @@ import java.util.ArrayList;
 
 import JiFa.Data.Interface.DAOProject;
 
-public class DAOProjectMockUp implements DAOProject {
-	private ArrayList<String[]> projectList = null;
-	public DAOProjectMockUp() {
-		
-		this.projectList = new ArrayList<String[]>();
-	}
+public class BCDAOProject implements DAOProject {
 
 	@Override
 	public void createProject(String[] data) {
-		//String reihenfolge
-		//Id, date, creator, description, name ,deadline 
-		projectList.add(data);
+		// TODO Auto-generated method stub
 		
 	}
 
