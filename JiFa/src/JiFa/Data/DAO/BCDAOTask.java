@@ -13,7 +13,7 @@ public class BCDAOTask implements DAOTask{
 	}
 
 	@Override
-	public void editTask(int id) {
+	public void editTask(String[] data, int id) {
 		// TODO Auto-generated method stub
 		
 	}

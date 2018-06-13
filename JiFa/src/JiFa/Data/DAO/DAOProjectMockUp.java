@@ -21,20 +21,30 @@ public class DAOProjectMockUp implements DAOProject {
 
 	@Override
 	public void editProject(String[] data, int id) {
-		// TODO Auto-generated method stub
+		//Test if works
+		for(String[] proj : projectList){
+			if(proj[0].equals(Integer.toString(id))){
+				proj = data;
+				break;
+			}
+		}
 		
 	}
 
 	@Override
 	public String[] getProject(int id) {
-		// TODO Auto-generated method stub
-		return null;
+        String[] result = null;
+		for(String[] proj : projectList){
+			if(proj[0].equals(Integer.toString(id))){
+				result = proj;
+			}
+		}
+		return result;
 	}
 
 	@Override
 	public ArrayList<String[]> getProjects() {
-		// TODO Auto-generated method stub
-		return null;
+		return projectList;
 	}
 
 }

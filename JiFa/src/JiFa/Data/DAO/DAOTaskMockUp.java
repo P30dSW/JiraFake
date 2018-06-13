@@ -5,35 +5,55 @@ import java.util.ArrayList;
 import JiFa.Data.Interface.DAOTask;
 
 public class DAOTaskMockUp implements DAOTask{
-
-	@Override
-	public void createTask(String[] data, int projectId) {
-		// TODO Auto-generated method stub
-		
+	private ArrayList<String[]> taskList = null;
+	public DAOTaskMockUp() {
+		taskList = new ArrayList<String[]>();
 	}
 
 	@Override
-	public void editTask(int id) {
-		// TODO Auto-generated method stub
+	public void createTask(String[] data, int projectId) {
+		//String reihenfolge
+		//Id, date, creator, description, name ,importance, asignee
+		taskList.add(data);
+	}
+
+	@Override
+	public void editTask(String[] data, int id) {
+		//Test if works
+				for(String[] task : taskList){
+					if(task[0].equals(Integer.toString(id))){
+						task = data;
+						break;
+					}
+				}
 		
 	}
 
 	@Override
 	public void deleteTask(int id) {
-		// TODO Auto-generated method stub
+		for(String[] task : taskList){
+			if(task[0].equals(Integer.toString(id))){
+				taskList.remove(task);
+			}
+		}
 		
 	}
 
 	@Override
 	public String[] getTask(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		String[] result = null;
+		for(String[] task : taskList){
+			if(task[0].equals(Integer.toString(id))){
+				result = task;
+			}
+		}
+		return result;
 	}
 
 	@Override
 	public ArrayList<String[]> getTasks() {
-		// TODO Auto-generated method stub
-		return null;
+	
+		return taskList;
 	}
 
 }
