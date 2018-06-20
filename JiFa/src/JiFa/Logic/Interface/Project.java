@@ -15,4 +15,6 @@ public interface Project {
 	public void setName(String name);
 	public Date getDeadline();
 	public void setDeadline(Date date);
+	public void addTask(Task tsk);
+	public void removeTask(Task tsk);
 }
