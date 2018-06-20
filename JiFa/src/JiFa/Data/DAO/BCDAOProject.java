@@ -30,4 +30,10 @@ public class BCDAOProject implements DAOProject {
 		return null;
 	}
 
+	@Override
+	public void deleteProject(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

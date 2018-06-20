@@ -47,4 +47,16 @@ public class DAOProjectMockUp implements DAOProject {
 		return projectList;
 	}
 
+	@Override
+	public void deleteProject(int id) {
+		
+		for(String[] proj : projectList){
+			if(proj[0].equals(Integer.toString(id))){
+				projectList.remove(proj);
+				break;
+			}
+		}
+		
+	}
+
 }
