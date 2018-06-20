@@ -13,8 +13,16 @@ public class DAOTaskMockUp implements DAOTask{
 	@Override
 	public void createTask(String[] data, int projectId) {
 		//String reihenfolge
-		//Id, date, creator, description, name ,importance, asignee
-		taskList.add(data);
+		//Id, date, creator, description, name ,importance, asignee, projectId
+		String[] newStgArray = new String[7] ;
+		for (int i = 0; i < 7; i++) {
+			if(i == 7){
+				newStgArray[i] = Integer.toString(projectId);
+			}else{
+				newStgArray[i] = data[i];
+			}
+		}
+		taskList.add(newStgArray);
 	}
 
 	@Override

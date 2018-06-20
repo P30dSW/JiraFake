@@ -26,7 +26,7 @@ public class DAOMockUpUnitTest {
 
 	@Test
 	public void cerateProjectWoTaskAndDelete() {
-		String[] proj01 = {"2","20.06.2018","Test Description","First Project", "30.06.2018"};
+		String[] proj01 = {"2","20.06.2018","Pedro","Test Description","First Project", "30.06.2018"};
 		projMockUp.createProject(proj01);
 		
 		for(String stg : projMockUp.getProject(2)){
@@ -42,18 +42,32 @@ public class DAOMockUpUnitTest {
 	public void showAllProjects() {
 		for(String[] stgs : projMockUp.getProjects()){
 			for(String stg : stgs){
-				System.out.println(stg);
+				System.out.println();
 			}
 			
 		}
 	}
 	@Test
-	public void showAllTask() {
-		fail("Not yet implemented");
+	public void showAllTasks() {
+		for(String[] stgs : taskMockUp.getTasks()){
+			for(String stg : stgs){
+				System.out.println();
+			}
+			
+		}
 	}
 	@Test
 	public void cerateProjectWTaskAndDelete() {
-		fail("Not yet implemented");
+		String[] proj01 = {"3","20.06.2018","Test Description","Second Project", "30.06.2018"};
+		projMockUp.createProject(proj01);
+		String[] tsk01 = {"1","20.06.18","Pedro","Description","Frist Task", "High", "Pedro"};
+		taskMockUp.createTask(tsk01, 3);
+		for(String stg : projMockUp.getProject(3)){
+			System.out.println(stg);
+		}
+		for(String stg : taskMockUp.getTask(1)){
+			System.out.println(stg);
+		}
 	}
 
 }
