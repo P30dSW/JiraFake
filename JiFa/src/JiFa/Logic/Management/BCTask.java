@@ -3,29 +3,27 @@ package JiFa.Logic.Management;
 import JiFa.Logic.Interface.Task;
 
 public class BCTask extends AbstractMedium implements Task{
-
+private int importance;
+private String asingee;
 	@Override
 	public int getImportance() {
-		// TODO Auto-generated method stub
-		return 0;
+		return importance;
 	}
 
 	@Override
 	public void setImportance(int imp) {
-		// TODO Auto-generated method stub
+		importance = imp;
 		
 	}
 
 	@Override
 	public String getAsignee() {
-		// TODO Auto-generated method stub
-		return null;
+		return asingee;
 	}
 
 	@Override
 	public void setAsignee(String asg) {
-		// TODO Auto-generated method stub
-		
+		asingee = asg;
 	}
 
 	

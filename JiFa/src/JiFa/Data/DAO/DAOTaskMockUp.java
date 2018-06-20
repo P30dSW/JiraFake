@@ -64,4 +64,19 @@ public class DAOTaskMockUp implements DAOTask{
 		return taskList;
 	}
 
+	@Override
+	public int getHightestUnasginedId() {
+		int bigNum = 0;
+		if(taskList.size() != 0){
+		
+		for(String[] stg : taskList){
+			if(Integer.parseInt(stg[0]) > bigNum){
+				bigNum = Integer.parseInt(stg[0]);
+			}
+		}
+		}
+		
+		return bigNum;
+	}
+
 }

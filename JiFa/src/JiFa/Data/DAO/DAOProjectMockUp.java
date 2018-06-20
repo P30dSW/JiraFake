@@ -59,4 +59,21 @@ public class DAOProjectMockUp implements DAOProject {
 		
 	}
 
+	@Override
+	public int getHightestUnasginedId() {
+		int bigNum = 0;
+		if(projectList.size() != 0){
+		
+		for(String[] stg : projectList){
+			if(Integer.parseInt(stg[0]) > bigNum){
+				bigNum = Integer.parseInt(stg[0]);
+			}
+		}
+		}
+		if(bigNum != 0){
+			bigNum += 1;
+		}
+		return bigNum;
+	}
+
 }

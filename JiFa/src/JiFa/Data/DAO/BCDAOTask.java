@@ -36,4 +36,10 @@ public class BCDAOTask implements DAOTask{
 		return null;
 	}
 
+	@Override
+	public int getHightestUnasginedId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

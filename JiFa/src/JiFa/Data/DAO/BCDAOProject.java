@@ -36,4 +36,10 @@ public class BCDAOProject implements DAOProject {
 		
 	}
 
+	@Override
+	public int getHightestUnasginedId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

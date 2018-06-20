@@ -8,4 +8,5 @@ public interface DAOProject {
 	 public void deleteProject(int id);
 	 public String[] getProject(int id);
 	 public ArrayList<String[]> getProjects();
+	 public int getHightestUnasginedId();
 }
