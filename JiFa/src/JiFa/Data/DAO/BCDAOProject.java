@@ -44,6 +44,18 @@ public class BCDAOProject implements DAOProject {
 		      }
 			//adds and inserts it 
 		      projList.add(data);
+		    //clears file 
+	    	  try {
+	 	        File file = new File("resources/project.ser");
+	 	       if(file.exists()){
+	 	    	  file.delete(); 
+	 	       }
+	 	      file.createNewFile();
+	 	       
+	 	      } catch (IOException i) {
+	 	         i.printStackTrace();
+	 	         return;
+	 	      }
 		      try {
 			         FileOutputStream fileOut = new FileOutputStream("resources/project.ser");
 			         ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -84,7 +96,7 @@ public class BCDAOProject implements DAOProject {
 	    		  break;
 	    	  }
 	      }
-	    	  projList.size();
+	    	  
 	    	  //clears file 
 	    	  try {
 	 	        File fil = new File("resources/project.ser");
@@ -233,7 +245,10 @@ public class BCDAOProject implements DAOProject {
 	@Override
 	public int getHightestUnasginedId() {
 		ArrayList<String[]> projList = null;
-		
+		int highestNum = 0;
+		File fil = new File("resources/project.ser");
+		if( fil.length() != 0){
+			
 	      try {
 	         FileInputStream fileIn = new FileInputStream("resources/project.ser");
 	         ObjectInputStream in = new ObjectInputStream(fileIn);
@@ -245,14 +260,15 @@ public class BCDAOProject implements DAOProject {
 	      } catch (ClassNotFoundException c) {
 	         c.printStackTrace();
 	      }
-	      int highestNum = 0;
+	      
 	      for(String[] stg : projList){
 	    	  if(Integer.parseInt(stg[0]) > highestNum){
 	    		  highestNum = Integer.parseInt(stg[0]);
 	    	  }
 	      }
-	    	  
-		return highestNum + 1;
+	      highestNum += 1;
+		}  
+		return highestNum;
 	}
 	
 	
