@@ -2,6 +2,8 @@ package JiFa.Logic.UnitTest;
 
 import static org.junit.Assert.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import org.junit.Assert;
@@ -13,11 +15,36 @@ import JiFa.Logic.Interface.LogicManagement;
 import JiFa.Logic.Interface.Project;
 import JiFa.Logic.Interface.Task;
 
-public class MockUpLogicUnitTest {
+public class LogicUnitTest {
 	LogicManagement lg ;
 	@Before
 	public void setUp() throws Exception {
 		lg = LogicFactory.getLogicInstance();
+		
+		//clears project.sar
+				try {
+		 	        File file = new File("resources/project.ser");
+		 	       if(file.exists()){
+		 	    	  file.delete(); 
+		 	       }
+		 	      file.createNewFile();
+		 	       
+		 	      } catch (IOException i) {
+		 	         i.printStackTrace();
+		 	         return;
+		 	      }
+				//clears task.sar
+				try {
+		 	        File file = new File("resources/task.ser");
+		 	       if(file.exists()){
+		 	    	  file.delete(); 
+		 	       }
+		 	      file.createNewFile();
+		 	       
+		 	      } catch (IOException i) {
+		 	         i.printStackTrace();
+		 	         return;
+		 	      }
 	}
 
 	@Test
