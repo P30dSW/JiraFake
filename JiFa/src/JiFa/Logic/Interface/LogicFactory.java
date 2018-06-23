@@ -10,7 +10,7 @@ public static LogicFactory getInstance(){
 	}
 	return theInstance;
 }
-public LogicManagement getLogicInstance(){
+public static LogicManagement getLogicInstance(){
 	if(LogicInstance == null){
 		LogicInstance = new LogicManagement();
 	}
