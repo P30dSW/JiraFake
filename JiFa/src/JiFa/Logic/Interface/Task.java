@@ -5,8 +5,8 @@ import java.util.Date;
 public interface Task {
 	public int getId();
 	public void setId(int id);
-	public Date getDate();
-	public void setDate(Date date);
+	public String getDate();
+	public void setDate(String date);
 	public String getCreator();
 	public void setCreator(String creator);
 	public String getDescription();

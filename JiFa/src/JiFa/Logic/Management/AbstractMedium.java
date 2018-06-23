@@ -4,7 +4,7 @@ import java.util.Date;
 
 public abstract class AbstractMedium {
 	private int id;
-	private Date date;
+	private String date;
 	private String creator;
 	private String description;
 	private String name;
@@ -14,10 +14,10 @@ public abstract class AbstractMedium {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 	public String getCreator() {

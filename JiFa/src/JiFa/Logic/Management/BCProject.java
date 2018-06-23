@@ -7,21 +7,11 @@ import JiFa.Logic.Interface.Project;
 import JiFa.Logic.Interface.Task;
 
 public class BCProject extends AbstractMedium implements Project  {
-private Date deadLine;
+private String deadLine;
 private ArrayList<Task> taskList = null;
 
 public BCProject(){
 	taskList = new ArrayList<Task>();
-}
-@Override
-public Date getDeadline() {
-	return deadLine;
-}
-
-@Override
-public void setDeadline(Date date) {
-	deadLine = date;
-	
 }
 
 @Override
@@ -35,5 +25,18 @@ public void removeTask(Task tsk) {
 	taskList.remove(tsk);
 	
 }
+
+@Override
+public String getDeadline() {
+	
+	return deadLine;
+}
+
+@Override
+public void setDeadline(String date) {
+	deadLine = date;
+	
+}
+
 
 }

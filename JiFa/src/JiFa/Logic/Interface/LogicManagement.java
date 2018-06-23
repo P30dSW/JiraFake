@@ -28,19 +28,20 @@ public Project getProject(int projectId){
 	String[] stgProj = DAOProjectMockup.getProject(projectId);
 	BCProject proj = new BCProject();
 	proj.setId(Integer.parseInt(stgProj[0]));
-	Date dt = new Date();
 	//Date is missing
+	proj.setDate(stgProj[1]);
 	proj.setCreator(stgProj[2]);
 	proj.setDescription(stgProj[3]);
 	proj.setName(stgProj[4]);
 	//Deadline (uses Date) is Missing
+	proj.setDeadline(stgProj[5]);
 	return proj;
 }
 public Task getTask(int taskId){
 	String[] stgTsk = DAOTaskMockup.getTask(taskId);
 	BCTask tsk = new BCTask();
 	tsk.setId(Integer.parseInt(stgTsk[0]));
-	
+	tsk.setDate(stgTsk[1]);
 	tsk.setCreator(stgTsk[2]);
 	tsk.setDescription(stgTsk[3]);
 	tsk.setName(stgTsk[4]);

@@ -15,6 +15,7 @@ public class DAOProjectMockUp implements DAOProject {
 	public void createProject(String[] data) {
 		//String reihenfolge
 		//Id, date, creator, description, name ,deadline 
+		//Date und Deadline wird als DD.MM.YYYY gespeichert
 		projectList.add(data);
 		
 	}
