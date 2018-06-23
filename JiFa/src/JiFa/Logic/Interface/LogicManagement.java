@@ -36,4 +36,40 @@ public Project getProject(int projectId){
 	//Deadline (uses Date) is Missing
 	return proj;
 }
+public Task getTask(int taskId){
+	String[] stgTsk = DAOTaskMockup.getTask(taskId);
+	BCTask tsk = new BCTask();
+	tsk.setId(Integer.parseInt(stgTsk[0]));
+	
+	tsk.setCreator(stgTsk[2]);
+	tsk.setDescription(stgTsk[3]);
+	tsk.setName(stgTsk[4]);
+	tsk.setImportance(Integer.parseInt(stgTsk[5]));
+	tsk.setAsignee(stgTsk[6]);
+	return tsk;
+}
+public void  createProject(String[] project){
+	int currentId = DAOProjectMockup.getHightestUnasginedId();
+	project[0] = Integer.toString(currentId);
+	DAOProjectMockup.createProject(project);
+}
+public void createTask(String[] task, int projectId){
+	int currentId = DAOTaskMockup.getHightestUnasginedId();
+	task[0] = Integer.toString(currentId);
+	DAOTaskMockup.createTask(task, projectId);
+}
+public ArrayList<Project> getProject(){
+	ArrayList<Project> projList = new ArrayList<Project>();
+	for(String[] stg : DAOProjectMockup.getProjects()){
+		projList.add(getProject(Integer.parseInt(stg[0])));
+	}
+	return projList;
+}
+public ArrayList<Task> getTask(){
+	ArrayList<Task> tskList = new ArrayList<Task>();
+	for(String[] stg : DAOProjectMockup.getProjects()){
+		tskList.add(getTask(Integer.parseInt(stg[0])));
+	}
+	return tskList;
+}
 }
