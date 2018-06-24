@@ -1,3 +1,9 @@
+/**
+ * Klasse für den Lokaen Speichern von Projekten
+ * Erbt von DAOProject
+ * @author Winkler, Grigoletti, Szeszak
+ * @version 1.0
+ */
 package JiFa.Data.DAO;
 
 import java.util.ArrayList;
@@ -6,7 +12,11 @@ import java.io.*;
 import JiFa.Data.Interface.DAOProject;
 
 public class BCDAOProject implements DAOProject {
-
+	
+	/**
+	 * Erstellt einen Projekt und seipchert es
+	 * @param data StringArray von einen Projekt
+	 */
 	@Override
 	public void createProject(String[] data) {
 		//if the file is empty it adds a new arraylist, if not, then it extracts the list
@@ -70,7 +80,12 @@ public class BCDAOProject implements DAOProject {
 
 		
 	}
-
+	
+	/**
+	 * Man gibt einen Projekt ein mit einen Ähnlichen Id und es erstetzt den im Speicher
+	 * @param data StringArray vom Project
+	 * @param id idNummer vom Projekt
+	 */
 	@Override
 	public void editProject(String[] data, int id) {
 		ArrayList<String[]> projList = null;
@@ -124,7 +139,11 @@ public class BCDAOProject implements DAOProject {
 	      }
 		
 	
-
+	/**
+	 * Gibt einen Projekt anhand des id zurück
+	 * @param id idNummer des Projektes
+	 * @return StringArray von Projekt
+	 */
 	@Override
 	public String[] getProject(int id) {
 		ArrayList<String[]> projList = null;
@@ -161,7 +180,10 @@ public class BCDAOProject implements DAOProject {
 	      return result;
 	      }
 	}
-
+	/**
+	 * Gibt alle Projekten in einer ArrayList von Strings zurück
+	 * @return ArrayList von Projekten
+	 */
 	@Override
 	public ArrayList<String[]> getProjects() {
 		ArrayList<String[]> projList = null;
@@ -190,6 +212,10 @@ public class BCDAOProject implements DAOProject {
 		return projList;
 	}
 
+	/**
+	 * Löscht einen Projekt anhand der id
+	 * @param id idNummer des Projektes
+	 */
 	@Override
 	public void deleteProject(int id) {
 		ArrayList<String[]> projList = null;
@@ -242,6 +268,10 @@ public class BCDAOProject implements DAOProject {
 		
 	}
 
+	/**
+	 * gibt den nächsten mit besetzten ProjektID zurück
+	 * @return den nicht besetzten Id
+	 */
 	@Override
 	public int getHightestUnasginedId() {
 		ArrayList<String[]> projList = null;
