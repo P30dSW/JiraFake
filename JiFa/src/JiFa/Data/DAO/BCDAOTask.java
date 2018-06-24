@@ -1,3 +1,9 @@
+/**
+ * Klasse für den Lokaen Speichern von Task
+ * Erbt von DAOTask
+ * @author Winkler, Grigoletti, Szeszak
+ * @version 1.0
+ */
 package JiFa.Data.DAO;
 
 import java.io.File;
@@ -11,7 +17,12 @@ import java.util.ArrayList;
 import JiFa.Data.Interface.DAOTask;
 
 public class BCDAOTask implements DAOTask{
-
+	
+	/**
+	 * Erstellt einen Task und seipchert es
+	 * @param data StringArray vom Task
+	 * @param projectId IdNummer der zugewiesenden Project
+	 */
 	@Override
 	public void createTask(String[] data, int projectId) {
 		String[] newStgArray = new String[7] ;
@@ -82,7 +93,12 @@ public class BCDAOTask implements DAOTask{
 		}
 		
 	}
-
+	
+	/**
+	 * Man gibt einen Task ein mit einen Ähnlichen Id und es erstetzt den im Speicher
+	 * @param data StringArray vom Task
+	 * @param id idNummer vom Task
+	 */
 	@Override
 	public void editTask(String[] data, int id) {
 		ArrayList<String[]> tskList = null;
@@ -134,7 +150,10 @@ public class BCDAOTask implements DAOTask{
 	 	      }
 		
 	}
-
+	/**
+	 *Löscht einen Task anhand der id
+	 * @param id idNummer des Tasks
+	 */
 	@Override
 	public void deleteTask(int id) {
 		ArrayList<String[]> tskList = null;
@@ -187,6 +206,11 @@ public class BCDAOTask implements DAOTask{
 		
 	}
 
+	/**
+	 * Gibt einen Task anhand des id zurück
+	 * @param id idNummer des Tasks
+	 * @return StringArray von Task
+	 */
 	@Override
 	public String[] getTask(int id) {
 		ArrayList<String[]> tskList = null;
@@ -224,6 +248,10 @@ public class BCDAOTask implements DAOTask{
 	      }
 	}
 
+	/**
+	 * Gibt alle Task in einer ArrayList von Strings zurück
+	 * @return ArrayList von Tasks
+	 */
 	@Override
 	public ArrayList<String[]> getTasks() {
 		ArrayList<String[]> tskList = null;
@@ -253,6 +281,10 @@ public class BCDAOTask implements DAOTask{
 		
 	}
 
+	/**
+	 * gibt den nächsten mit besetzten TaskID zurück
+	 * @return den nicht besetzten Id
+	 */
 	@Override
 	public int getHightestUnasginedId() {
 		ArrayList<String[]> tskList = null;
