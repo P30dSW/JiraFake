@@ -26,8 +26,8 @@ public interface DAOProject {
 	 public void deleteProject(int id);
 	 /**
 		 * gibt den gesuchen Projekt anhand eines id züruck 
-		 * @params id idNummer des Projektes
-		 * @retrun StringArray vom Projekt
+		 * @param id idNummer des Projektes
+		 * @return StringArray vom Projekt
 		 */
 	 public String[] getProject(int id);
 	 /**
