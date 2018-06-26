@@ -7,13 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
 
-import javax.swing.DefaultListModel;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 import JiFa.Logic.Management.AbstractMedium;
 import JiFa.View.LogicClient.ViewLogicClient;
@@ -24,33 +18,21 @@ import javax.swing.JFrame;
 public class VProject extends JFrame implements ActionListener{
 
     private String nameProject;
-    private String deadlineProject
+    private String deadlineProject;
     private String descriptionProject;
 
+
         JLabel titleLabel;
+        JLabel projectNameLabel;
+        JLabel projectAsigneeLabel;
+        JLabel projectDescriptionLabel;
+        JLabel projectDeadlineLabel;
+        JLabel projectCreatorLabel;
 
-        JLabel numberPeopleLabel;
+        JTable taskTable;
 
-        JLabel radioLabel;
-        JButton radioButton1;
-        JButton radioButton2;
-        JButton radioButton3;
-
-        JButton weiterButton;
-
-        JPanel radioPanel = new JPanel();
-        JPanel radioButtonPanel = new JPanel();
-        JPanel everythingPanel = new JPanel();
-        JPanel choicePanel = new JPanel();
-        JPanel titlePanel = new JPanel();
-        JPanel numberPeoplePanel = new JPanel();
-        JPanel weiterPanel = new JPanel();
-
-        JTextField numberPeopleField = new JTextField(5);
 
         public VProject() {
-
-
 
             private project = vlc.getProject();
 
@@ -67,11 +49,10 @@ public class VProject extends JFrame implements ActionListener{
             projectCreatorLabel = createLabel("Project", true);
 
 
-            taskTable =
+            taskTable = new JTable();
 
-            createTaskButton = new JButton("Let's go!");
-            weiterButton.addActionListener(this);
-
+            createTaskButton = new JButton("New Task!!");
+            createTaskButton.addActionListener(this);
 
 
             setLayout(new BorderLayout());
@@ -82,11 +63,6 @@ public class VProject extends JFrame implements ActionListener{
             radioButtonPanel.setLayout(new GridLayout(3, 1));
             weiterPanel.setLayout(new BorderLayout());
             everythingPanel.setLayout(new BorderLayout());
-
-
-            everythingPanel.add(titlePanel, BorderLayout.NORTH);
-            everythingPanel.add(choicePanel, BorderLayout.CENTER);
-            everythingPanel.add(weiterPanel, BorderLayout.SOUTH);
 
             choicePanel.add(numberPeoplePanel, BorderLayout.NORTH);
             choicePanel.add(radioPanel, BorderLayout.SOUTH);
