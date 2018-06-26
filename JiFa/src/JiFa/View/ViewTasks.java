@@ -1,7 +1,9 @@
 package JiFa.View;
 
+
+
 /**
- * Die ViewTask zeigt in einer Art Liste alle Tasks des ausgewählten Projektes.
+ * Die ViewTask zeigt in einer Art Liste alle Tasks des ausgewï¿½hlten Projektes.
  * 
  * @author vmadmin
  *
