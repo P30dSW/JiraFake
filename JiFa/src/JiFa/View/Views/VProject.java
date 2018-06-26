@@ -23,7 +23,9 @@ import javax.swing.JFrame;
 
 public class VProject extends JFrame implements ActionListener{
 
-        String foodTime;
+    private String nameProject;
+    private String deadlineProject
+    private String descriptionProject;
 
         JLabel titleLabel;
 
