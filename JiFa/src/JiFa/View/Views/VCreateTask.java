@@ -17,6 +17,11 @@ public class VCreateTask extends JFrame implements ActionListener {
 	private JTextField nametxt, descriptiontxt, deadlinetxt, creatortxt, importancetxt, asigneetxt;
 	private JLabel namelbl, descriptionlbl, deadlinelbl, creatorlbl, importancelbl, asigneelbl;
 
+	/**
+	 * Buttonaktion werden definiert.
+	 * Finish: neues Projekt wird angelegt.
+	 * cancel: erstellung wird abgebrochen.
+	 */
 	public void actionPerformed(ActionEvent ae) {
 		if (ae.getSource() == finish) {
 			String[] list = { "1", deadlinetxt.getText(), creatortxt.getText(), descriptiontxt.getText(),
@@ -31,7 +36,10 @@ public class VCreateTask extends JFrame implements ActionListener {
 		}
 
 	}
-
+	
+	/**
+	 * Designerstellung
+	 */
 	public VCreateTask(int projectID) {
 		this.projectID = projectID;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
