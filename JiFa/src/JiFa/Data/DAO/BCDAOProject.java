@@ -14,7 +14,7 @@ import JiFa.Data.Interface.DAOProject;
 public class BCDAOProject implements DAOProject {
 	
 	/**
-	 * Erstellt einen Projekt und seipchert esasdgasdg
+	 * Erstellt einen Projekt und speichert
 	 * @param data StringArray von einen Projekt
 	 */
 	@Override
