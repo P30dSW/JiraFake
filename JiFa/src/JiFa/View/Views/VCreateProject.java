@@ -13,8 +13,8 @@ import JiFa.View.LogicClient.ViewLogicClient;
 public class VCreateProject extends JFrame implements ActionListener {
 
 	private JButton cancel, finish;
-	private JTextField nametxt, descriptiontxt, deadlinetxt, creatortxt, importancetxt, asigneetxt;
-	private JLabel namelbl, descriptionlbl, deadlinelbl, creatorlbl, importancelbl, asigneelbl;
+	private JTextField nametxt, descriptiontxt, deadlinetxt, creatortxt, importancetxt, assigneetxt;
+	private JLabel namelbl, descriptionlbl, deadlinelbl, creatorlbl, importancelbl, assigneelbl;
 
 	/**
 	 * Buttonaktion werden definiert.
@@ -24,7 +24,7 @@ public class VCreateProject extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent ae) {
 		if (ae.getSource() == finish) {
 			String[] list = {"1", deadlinetxt.getText(), creatortxt.getText(), descriptiontxt.getText(),
-					nametxt.getText(), importancetxt.getText(), asigneetxt.getText() };
+					nametxt.getText(), importancetxt.getText(), assigneetxt.getText() };
 			ViewLogicClient vlc = new ViewLogicClient();
 			vlc.createProject(list);
 			this.setVisible(false);
@@ -97,13 +97,13 @@ public class VCreateProject extends JFrame implements ActionListener {
 		this.add(importancetxt);
 		
 		
-		asigneelbl = new JLabel();
-		asigneelbl.setBounds(5, 5, 5, 5);
-		asigneelbl.setText("Asignee: ");
-		this.add(asigneelbl);
+		assigneelbl = new JLabel();
+		assigneelbl.setBounds(5, 5, 5, 5);
+		assigneelbl.setText("Asignee: ");
+		this.add(assigneelbl);
 		
-		asigneetxt = new JTextField();
-		asigneetxt.setBounds(10, 10, 10, 10);
-		this.add(asigneetxt);
+		assigneetxt = new JTextField();
+		assigneetxt.setBounds(10, 10, 10, 10);
+		this.add(assigneetxt);
 	}
 }
