@@ -1,3 +1,9 @@
+/**
+ * Klasse für den Runtimespeicher von Task
+ * Erbt von DAOTask
+ * @author Winkler, Grigoletti, Szeszak
+ * @version 1.0
+ */
 package JiFa.Data.DAO;
 
 import java.util.ArrayList;
@@ -10,6 +16,11 @@ public class DAOTaskMockUp implements DAOTask{
 		taskList = new ArrayList<String[]>();
 	}
 
+	/**
+	 * Erstellt einen Task und seipchert es
+	 * @param data StringArray vom Task
+	 * @param projectId IdNummer der zugewiesenden Project
+	 */
 	@Override
 	public void createTask(String[] data, int projectId) {
 		//String reihenfolge
@@ -25,6 +36,11 @@ public class DAOTaskMockUp implements DAOTask{
 		taskList.add(newStgArray);
 	}
 
+	/**
+	 * Man gibt einen Task ein mit einen Ähnlichen Id und es erstetzt den im Speicher
+	 * @param data StringArray vom Task
+	 * @param id idNummer vom Task
+	 */
 	@Override
 	public void editTask(String[] data, int id) {
 		//Test if works
@@ -37,6 +53,10 @@ public class DAOTaskMockUp implements DAOTask{
 		
 	}
 
+	/**
+	 *Löscht einen Task anhand der id
+	 * @param id idNummer des Tasks
+	 */
 	@Override
 	public void deleteTask(int id) {
 		for(String[] task : taskList){
@@ -46,7 +66,11 @@ public class DAOTaskMockUp implements DAOTask{
 		}
 		
 	}
-
+	/**
+	 * Gibt einen Task anhand des id zurück
+	 * @param id idNummer des Tasks
+	 * @return StringArray von Task
+	 */
 	@Override
 	public String[] getTask(int id) {
 		String[] result = null;
@@ -57,11 +81,32 @@ public class DAOTaskMockUp implements DAOTask{
 		}
 		return result;
 	}
-
+	/**
+	 * Gibt alle Task in einer ArrayList von Strings zurück
+	 * @return ArrayList von Tasks
+	 */
 	@Override
 	public ArrayList<String[]> getTasks() {
 	
 		return taskList;
+	}
+	/**
+	 * gibt den nächsten mit besetzten TaskID zurück
+	 * @return den nicht besetzten Id
+	 */
+	@Override
+	public int getHightestUnasginedId() {
+		int bigNum = 0;
+		if(taskList.size() != 0){
+		
+		for(String[] stg : taskList){
+			if(Integer.parseInt(stg[0]) > bigNum){
+				bigNum = Integer.parseInt(stg[0]);
+			}
+		}
+		}
+		
+		return bigNum;
 	}
 
 }

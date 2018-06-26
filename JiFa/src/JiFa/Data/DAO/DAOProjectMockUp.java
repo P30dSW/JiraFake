@@ -1,3 +1,9 @@
+/**
+ * Klasse für den Runtimespeichern von Projekten
+ * Erbt von DAOProject
+ * @author Winkler, Grigoletti, Szeszak
+ * @version 1.0
+ */
 package JiFa.Data.DAO;
 
 import java.util.ArrayList;
@@ -10,15 +16,24 @@ public class DAOProjectMockUp implements DAOProject {
 		
 		this.projectList = new ArrayList<String[]>();
 	}
-
+	/**
+	 * erstellt eien Projekt
+	 * @param data StringArray von PRojekt
+	 */
 	@Override
 	public void createProject(String[] data) {
 		//String reihenfolge
 		//Id, date, creator, description, name ,deadline 
+		//Date und Deadline wird als DD.MM.YYYY gespeichert
 		projectList.add(data);
 		
 	}
-
+	
+	/**
+	 * ändert einen Projekt
+	 * @param data StringArray von PRojekt
+	 * @param id id eines Projektes
+	 */
 	@Override
 	public void editProject(String[] data, int id) {
 		//Test if works
@@ -31,6 +46,11 @@ public class DAOProjectMockUp implements DAOProject {
 		
 	}
 
+	/**
+	 * gibt den gesuchen Projekt anhand eines id züruck 
+	 * @params id idNummer des Projektes
+	 * @retrun StringArray vom Projekt
+	 */
 	@Override
 	public String[] getProject(int id) {
         String[] result = null;
@@ -41,12 +61,20 @@ public class DAOProjectMockUp implements DAOProject {
 		}
 		return result;
 	}
-
+	
+	/**
+	 * gibt eine Liste von allen Proejkten züruck
+	 * @return ArraList von Projekten StringArray
+	 */
 	@Override
 	public ArrayList<String[]> getProjects() {
 		return projectList;
 	}
-
+	
+	/**
+	 * löscht den Projekt
+	 * @param id IdNummer des Projektes
+	 */
 	@Override
 	public void deleteProject(int id) {
 		
@@ -57,6 +85,26 @@ public class DAOProjectMockUp implements DAOProject {
 			}
 		}
 		
+	}
+	/**
+	 * gibt den höchsten nicht benutzten Id züruck
+	 * @return integer der offenen ID
+	 */
+	@Override
+	public int getHightestUnasginedId() {
+		int bigNum = 0;
+		if(projectList.size() != 0){
+		
+		for(String[] stg : projectList){
+			if(Integer.parseInt(stg[0]) > bigNum){
+				bigNum = Integer.parseInt(stg[0]);
+			}
+		}
+		}
+		if(bigNum != 0){
+			bigNum += 1;
+		}
+		return bigNum;
 	}
 
 }

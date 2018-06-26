@@ -22,6 +22,8 @@ public class DAOMockUpUnitTest {
 
 	@After
 	public void tearDown() throws Exception {
+		projMockUp = null;
+		taskMockUp = null;
 	}
 
 	@Test

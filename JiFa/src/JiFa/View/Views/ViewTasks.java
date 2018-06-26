@@ -1,4 +1,4 @@
-package JiFa.View;
+package JiFa.View.Views;
 
 
 
