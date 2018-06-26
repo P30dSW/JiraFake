@@ -20,34 +20,34 @@ public class ViewLogicClient {
 	}
 	
 	public void createProject(String[] project){
-		
+		logic.createProject(project);
 	}
 	public void editProject(String[] project){
-		
+		logic.editProject(project);
 	}
 	public void deleteProject(int projectId){
-		
+		logic.deleteProject(projectId);
 	}
 	public void createTask(String[] task,int projectId){
-		
+		logic.createTask(task, projectId);
 	}
 	public void editTask(String[] task){
-		
+		logic.editTask(task);
 	}
 	public void deleteTask(int taskId){
-		
+		logic.deleteTask(taskId);
 	}
 	public Project getProject(int projectId){
-		return null;
+		return logic.getProject(projectId);
 	}
 	public Task getTask(int taskId){
-		return null;
+		return logic.getTask(taskId);
 	}
 	public ArrayList<Project> getProject(){
-		return null;
+		return logic.getProject();
 	}
 	public ArrayList<Task> getTask(){
-		return null;
+		return logic.getTask();
 	}
 
 }
