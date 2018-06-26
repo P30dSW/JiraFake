@@ -15,6 +15,8 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import JiFa.Logic.Management.AbstractMedium;
+import JiFa.View.LogicClient.ViewLogicClient;
 import com.sun.glass.events.WindowEvent;
 
 import javax.swing.JFrame;
@@ -44,22 +46,28 @@ public class VProject extends JFrame implements ActionListener{
 
         JTextField numberPeopleField = new JTextField(5);
 
-        public Start() {
-            titleLabel = createLabel("Foodinator", true);
+        public VProject() {
 
-            numberPeopleLabel = createLabel("How many people are hungry? (max. 4)", true);
 
-            radioLabel = createLabel("What food is it time for..?", true);
-            radioButton1 = new JButton("Breakfast!");
-            radioButton1.addActionListener(this);
 
-            radioButton2 = new JButton("Lunch!");
-            radioButton2.addActionListener(this);
+            private project = vlc.getProject();
 
-            radioButton3 = new JButton("Dinner!");
-            radioButton3.addActionListener(this);
+            titleLabel = createLabel("FakeJira", true);
 
-            weiterButton = new JButton("Let's go!");
+            projectNameLabel = createLabel("Name", true);
+
+            projectAsigneeLabel = createLabel("Project", true);
+
+            projectDescriptionLabel = createLabel("Project", true);
+
+            projectDeadlineLabel = createLabel("Project", true);
+
+            projectCreatorLabel = createLabel("Project", true);
+
+
+            taskTable =
+
+            createTaskButton = new JButton("Let's go!");
             weiterButton.addActionListener(this);
 
 
