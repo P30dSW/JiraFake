@@ -41,11 +41,19 @@ public class VCreateProject extends JFrame implements ActionListener {
 	 */
 	public VCreateProject() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setSize(1000, 700);
+		this.setSize(300, 400);
 		this.setVisible(true);
 		this.setTitle("New Task");
 		this.setLayout(null);
 		this.setResizable(false);
+		
+		finish = new JButton("Finish");
+		finish.setBounds(30, 250, 80, 30);
+		this.add(finish);
+		
+		cancel = new JButton("Cancel");
+		cancel.setBounds(130, 250, 80, 30);
+		this.add(cancel);
 		
 		namelbl = new JLabel();
 		namelbl.setBounds(5, 5, 100, 30);
