@@ -17,7 +17,7 @@ public class VCreateProject extends JFrame implements ActionListener {
 	private JLabel namelbl, descriptionlbl, deadlinelbl, creatorlbl, importancelbl, assigneelbl;
 
 	/**
-	 * Buttonaktion werden definiert.
+	 * Buttonaktionen werden definiert.
 	 * Finish: neues Projekt wird angelegt.
 	 * cancel: erstellung wird abgebrochen.
 	 */
@@ -48,62 +48,62 @@ public class VCreateProject extends JFrame implements ActionListener {
 		this.setResizable(false);
 		
 		namelbl = new JLabel();
-		namelbl.setBounds(5, 5, 5, 5);
-		namelbl.setText("Owner: ");
+		namelbl.setBounds(5, 5, 100, 30);
+		namelbl.setText("Projectname: ");
 		this.add(namelbl);
 		
 		nametxt = new JTextField();
-		nametxt.setBounds(10, 10, 10, 10);
+		nametxt.setBounds(110, 5, 100, 30);
 		this.add(nametxt);
 		
 		
 		descriptionlbl = new JLabel();
-		descriptionlbl.setBounds(5, 5, 5, 5);
+		descriptionlbl.setBounds(5, 45, 100, 30);
 		descriptionlbl.setText("Description: ");
 		this.add(descriptionlbl);
 		
 		descriptiontxt = new JTextField();
-		descriptiontxt.setBounds(10, 10, 10, 10);
+		descriptiontxt.setBounds(110, 45, 100, 30);
 		this.add(descriptiontxt);
 		
 		
 		deadlinelbl = new JLabel();
-		deadlinelbl.setBounds(5, 5, 5, 5);
+		deadlinelbl.setBounds(5, 85, 100, 30);
 		deadlinelbl.setText("Deadline: ");
 		this.add(deadlinelbl);
 		
 		deadlinetxt = new JTextField();
-		deadlinetxt.setBounds(10, 10, 10, 10);
+		deadlinetxt.setBounds(110, 85, 100, 30);
 		this.add(deadlinetxt);
 		
 		
 		creatorlbl = new JLabel();
-		creatorlbl.setBounds(5, 5, 5, 5);
+		creatorlbl.setBounds(5, 125, 100, 30);
 		creatorlbl.setText("Creator: ");
 		this.add(creatorlbl);
 		
 		creatortxt = new JTextField();
-		creatortxt.setBounds(10, 10, 10, 10);
+		creatortxt.setBounds(110, 125, 100, 30);
 		this.add(creatortxt);
 		
 		
 		importancelbl = new JLabel();
-		importancelbl.setBounds(5, 5, 5, 5);
+		importancelbl.setBounds(5, 165, 100, 30);
 		importancelbl.setText("Importance: ");
 		this.add(importancelbl);
 		
 		importancetxt = new JTextField();
-		importancetxt.setBounds(10, 10, 10, 10);
+		importancetxt.setBounds(110, 165, 100, 30);
 		this.add(importancetxt);
 		
 		
 		assigneelbl = new JLabel();
-		assigneelbl.setBounds(5, 5, 5, 5);
+		assigneelbl.setBounds(5, 205, 100, 30);
 		assigneelbl.setText("Asignee: ");
 		this.add(assigneelbl);
 		
 		assigneetxt = new JTextField();
-		assigneetxt.setBounds(10, 10, 10, 10);
+		assigneetxt.setBounds(110, 205, 100, 30);
 		this.add(assigneetxt);
 	}
 }
