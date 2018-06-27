@@ -22,6 +22,9 @@ public class VCreateProject extends JFrame implements ActionListener {
 	private JTextField nametxt, descriptiontxt, deadlinetxt, creatortxt, importancetxt, assigneetxt;
 	private JLabel namelbl, descriptionlbl, deadlinelbl, creatorlbl, importancelbl, assigneelbl;
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		VCreateProject vct = new VCreateProject();
 	}
