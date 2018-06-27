@@ -49,25 +49,20 @@ public class VCreateTask extends JFrame implements ActionListener {
 	 */
 	
 	public VCreateTask(int projectID) {
-		this.projectID = projectID;
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setSize(300, 400);
-		this.setVisible(true);
-		this.setTitle("New Task");
-		this.setLayout(null);
-		this.setResizable(false);
 		
 		finish = new JButton("Finish");
+		finish.addActionListener(this);
 		finish.setBounds(30, 250, 80, 30);
 		this.add(finish);
 		
 		cancel = new JButton("Cancel");
+		cancel.addActionListener(this);
 		cancel.setBounds(130, 250, 80, 30);
 		this.add(cancel);
 		
 		namelbl = new JLabel();
 		namelbl.setBounds(5, 5, 100, 30);
-		namelbl.setText("Projectname: ");
+		namelbl.setText("Taskname: ");
 		this.add(namelbl);
 		
 		nametxt = new JTextField();
@@ -124,7 +119,13 @@ public class VCreateTask extends JFrame implements ActionListener {
 		assigneetxt.setBounds(110, 205, 100, 30);
 		this.add(assigneetxt);
 		
-		
+		this.projectID = projectID;
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(300, 400);
+		this.setVisible(true);
+		this.setTitle("New Task");
+		this.setLayout(null);
+		this.setResizable(false);
 		
 		
 	}

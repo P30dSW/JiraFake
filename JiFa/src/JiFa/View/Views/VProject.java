@@ -16,7 +16,7 @@ public class VProject extends JFrame implements ActionListener{
 
 
 
-        JLabel titleLabel, projectNameLabel,  projectAsigneeLabel, projectDescriptionLabel,  projectDeadlineLabel, projectCreatorLabel;
+        JLabel titleLabel, projectNameLabel,  projectAssigneeLabel, projectDescriptionLabel,  projectDeadlineLabel, projectCreatorLabel;
 
         JTable taskTable;
 
@@ -43,9 +43,9 @@ public class VProject extends JFrame implements ActionListener{
             this.add(projectName);
 
 
-            projectAsigneeLabel = createLabel(asigneeProject, true);
-            projectAsigneeLabel.setBounds(5, 5, 5, 5);
-            projectAsigneeLabel.setText("Owner: ");
+            projectAssigneeLabel = createLabel(asigneeProject, true);
+            projectAssigneeLabel.setBounds(5, 5, 5, 5);
+            projectAssigneeLabel.setText("Owner: ");
             this.add(projectAssignee);
 
             projectDescriptionLabel = createLabel("Project", true);
