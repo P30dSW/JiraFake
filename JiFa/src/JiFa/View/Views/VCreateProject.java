@@ -10,6 +10,12 @@ import javax.swing.JTextField;
 
 import JiFa.View.LogicClient.ViewLogicClient;
 
+/**
+ * In dieser Klasse werden neue Projekte erstellt.
+ * @author winkler, szeszak, grigoletti
+ *
+ */
+
 public class VCreateProject extends JFrame implements ActionListener {
 
 	private JButton cancel, finish;

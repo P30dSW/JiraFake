@@ -12,6 +12,11 @@ import JiFa.View.LogicClient.ViewLogicClient;
 
 
 
+/**
+ * In dieser Klasse werden neue Tasks erstellt.
+ * @author winkler, szeszak, grigoletti
+ *
+ */
 public class VCreateTask extends JFrame implements ActionListener {
 
 	private int projectID;
@@ -20,6 +25,9 @@ public class VCreateTask extends JFrame implements ActionListener {
 	private JLabel namelbl, descriptionlbl, deadlinelbl, creatorlbl, importancelbl, assigneelbl;
 
 	
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		VCreateTask vct = new VCreateTask(1);
 	}
