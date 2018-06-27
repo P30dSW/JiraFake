@@ -22,9 +22,9 @@ public class VCreateProject extends JFrame implements ActionListener {
 	private JTextField nametxt, descriptiontxt, deadlinetxt, creatortxt, importancetxt, assigneetxt;
 	private JLabel namelbl, descriptionlbl, deadlinelbl, creatorlbl, importancelbl, assigneelbl;
 
-//	public static void main(String[] args) {
-//		VCreateProject vct = new VCreateProject();
-//	}
+	public static void main(String[] args) {
+		VCreateProject vct = new VCreateProject();
+	}
 
 	/**
 	 * Buttonaktionen werden definiert. Finish: neues Projekt wird angelegt. cancel:
@@ -111,13 +111,13 @@ public class VCreateProject extends JFrame implements ActionListener {
 		this.add(assigneelbl);
 
 		assigneetxt = new JTextField();
-		assigneetxt.setBounds(120, 205, 100, 30);
+		assigneetxt.setBounds(110, 205, 100, 30);
 		this.add(assigneetxt);
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(300, 400);
 		this.setVisible(true);
-		this.setTitle("New Task");
+		this.setTitle("New Project");
 		this.setLayout(null);
 		this.setResizable(false);
 	}
