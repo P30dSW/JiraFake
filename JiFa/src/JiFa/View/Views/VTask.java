@@ -23,7 +23,7 @@ public class VTask extends JFrame implements ActionListener {
     JButton createTaskButton;
 
 
-    public VProject() {
+    public VTask() {
 
         ViewLogicClient vlc = new ViewLogicClient();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

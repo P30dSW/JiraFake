@@ -9,11 +9,7 @@ import javax.swing.JFrame;
 
 public class VProject extends JFrame implements ActionListener{
 
-    private String nameProject = "";
-    private String deadlineProject = "";
-    private String descriptionProject = "";
-    private String asigneeProject = "";
-
+    private String nameProject, deadlineProject, descriptionProject, asigneeProject;
 
 
         JLabel titleLabel, projectNameLabel,  projectAssigneeLabel, projectDescriptionLabel,  projectDeadlineLabel, projectCreatorLabel;
@@ -39,29 +35,29 @@ public class VProject extends JFrame implements ActionListener{
 
             projectNameLabel = createLabel(nameProject, true);
             projectNameLabel.setBounds(5, 5, 5, 5);
-            projectNameLabel.setText("Owner: ");
-            this.add(projectName);
+            projectNameLabel.setText("Project: ");
+            this.add(projectNameLabel);
 
 
             projectAssigneeLabel = createLabel(asigneeProject, true);
             projectAssigneeLabel.setBounds(5, 5, 5, 5);
-            projectAssigneeLabel.setText("Owner: ");
-            this.add(projectAssignee);
+            projectAssigneeLabel.setText("Assignee: ");
+            this.add(projectAssigneeLabel);
 
             projectDescriptionLabel = createLabel("Project", true);
             projectDescriptionLabel.setBounds(5, 5, 5, 5);
-            projectDescriptionLabel.setText("Owner: ");
-            this.add(projectDescription);
+            projectDescriptionLabel.setText("Description: ");
+            this.add(projectDescriptionLabel);
 
             projectDeadlineLabel = createLabel("Project", true);
-            projectNameLabel.setBounds(5, 5, 5, 5);
-            projectNameLabel.setText("Owner: ");
-            this.add(projectName);
+            projectDeadlineLabel.setBounds(5, 5, 5, 5);
+            projectDeadlineLabel.setText("Deadline: ");
+            this.add(projectDeadlineLabel);
 
             projectCreatorLabel = createLabel("Project", true);
             projectCreatorLabel.setBounds(5, 5, 5, 5);
-            projectCreatorLabel.setText("Owner: ");
-            this.add(projectName);
+            projectCreatorLabel.setText("Creator: ");
+            this.add(projectCreatorLabel);
 
 
             taskTable = new JTable();
@@ -87,8 +83,11 @@ public class VProject extends JFrame implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
             // TODO Auto-generated method stub
+        	
+        	
+        	
             if (e.getSource() == createTaskButton){
-                VCreateTask ntask = new VCreateTask(xx);
+                VCreateTask ntask = new VCreateTask(1);
                  dispose();
             }
 
